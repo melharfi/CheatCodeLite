@@ -1,3 +1,3 @@
 # CheatCodeLite
 Cheat code keyword handler
-<img src="logo.png" width = "600">
+<img src="logo.png">
