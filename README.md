@@ -31,13 +31,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CheatCodeLite;
 
-namespace winform_test
-{
-    public partial class Form1 : Form
-    {
-        readonly CheatCodeLite.CheatCodeLite cch;
-        public Form1()
-        {
+namespace winform_test<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        readonly CheatCodeLite.CheatCodeLite cch;<br>
+        public Form1()<br>
+        {<br>
             InitializeComponent();
             cch = new CheatCodeLite.CheatCodeLite(10000000);
 
