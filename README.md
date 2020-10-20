@@ -20,24 +20,35 @@ or using nuget
 one it's done you can then use this code to start :
 
 using System;
+
 using System.Collections.Generic;
+
 using System.ComponentModel;
+
 using System.Data;
+
 using System.Drawing;
+
 using System.Linq;
+
 using System.Text;
+
 using System.Threading;
+
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
+
 using CheatCodeLite;
 
-namespace winform_test<br>
-{<br>
-    public partial class Form1 : Form<br>
-    {<br>
-        readonly CheatCodeLite.CheatCodeLite cch;<br>
-        public Form1()<br>
-        {<br>
+namespace winform_test
+
+{
+    public partial class Form1 : Form
+    {
+        readonly CheatCodeLite.CheatCodeLite cch;
+        public Form1()
+        {
             InitializeComponent();
             cch = new CheatCodeLite.CheatCodeLite(10000000);
 
