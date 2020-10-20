@@ -1,5 +1,5 @@
 # CheatCodeLite
-Cheat code keyword handler<br>
+Cheat code keystrokes<br>
 
 <img src="logo.png" width="100">
 
