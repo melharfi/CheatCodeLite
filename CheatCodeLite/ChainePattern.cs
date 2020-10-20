@@ -6,9 +6,9 @@ namespace CheatCodeLite
 {
     public class ChainePattern
     {
-        public readonly int[] Pattern;
+        public readonly List<int> Pattern;
         public string Alias { get; set; }
-        public ChainePattern(int[] pattern, string alias)
+        public ChainePattern(List<int> pattern, string alias)
         {
             Alias = alias ?? throw new ArgumentNullException(nameof(alias));
             Pattern = pattern;
@@ -16,7 +16,7 @@ namespace CheatCodeLite
 
         public int Count()
         {
-            return Pattern.Length;
+            return Pattern.Count;
         }
     }
 }
