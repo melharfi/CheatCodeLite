@@ -10,6 +10,7 @@
     <RepositoryUrl>https://github.com/melharfi/CheatCodeLite</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <ApplicationIcon>logo.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

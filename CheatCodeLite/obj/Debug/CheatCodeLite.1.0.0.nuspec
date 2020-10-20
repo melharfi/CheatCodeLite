@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CheatCodeLite</id>
+    <version>1.0.0</version>
+    <authors>Mohssine EL HARFI</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>logo.png</icon>
+    <projectUrl>https://github.com/melharfi/CheatCodeLite</projectUrl>
+    <description>Cheat code handler</description>
+    <repository type="git" url="https://github.com/melharfi/CheatCodeLite" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\bin\Debug\netstandard2.0\CheatCodeLite.dll" target="lib\netstandard2.0\CheatCodeLite.dll" />
+    <file src="D:\Project\Repos\Github\CheatCodeLite\LICENSE.txt" target="LICENSE.txt" />
+    <file src="D:\Project\Repos\Github\CheatCodeLite\logo.png" target="logo.png" />
+  </files>
+</package>
