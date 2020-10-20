@@ -7,10 +7,9 @@ using System.Text;
 
 namespace CheatCodeLite
 {
-    public class CheatCodeHandler : IEnumerable<int>
+    public class CheatCodeHandler
     {
         readonly double interval;
-        int index;
         List<ChainePattern> matchedPatterns = new List<ChainePattern>();
         readonly List<ChainePattern> availablePatterns = new List<ChainePattern>();
         readonly Stopwatch stopWatch = new Stopwatch();
@@ -25,10 +24,13 @@ namespace CheatCodeLite
             AddedPattern?.Invoke(this, e);
         }
 
+        // add new cheat code pattern
         public void AddChainePattern(ChainePattern cp)
         {
+            // some checks
             foreach (ChainePattern current in availablePatterns)
             {
+                // check against fact that passed pattern will hide some existed pattern line new pattern "ABC" will hide an existing pattern like "ABCD" cause the older one will never be triggered
                 if (cp.Count() < current.Count())
                 {
                     int[] newCp = new int[cp.Count()];
@@ -36,6 +38,7 @@ namespace CheatCodeLite
                     if (cp.Pattern.SequenceEqual(newCp))
                         throw new Exception("Duplication found, new pattern \"" + cp.Alias + "\" will hide \"" + current.Alias + "\" alreay existed");
                 }
+                // check against fact that passed pattern will be hidden by an existing pattern line new pattern "ABCD" will be hidden by an existing pattern like "ABC" will hide new one "ABCD"
                 else if (cp.Count() > current.Count())
                 {
                     int[] newCp = new int[current.Count()];
@@ -43,6 +46,7 @@ namespace CheatCodeLite
                     if (current.Pattern.SequenceEqual(newCp))
                         throw new Exception("Duplication found, the already registred pattern \"" + current.Alias + "\" will hide the new one \"" + cp.Alias + "\"");
                 }
+                // check if dupplication exist
                 else if (cp.Count() == current.Count())
                 {
                     if (current.Pattern.SequenceEqual(cp.Pattern))
@@ -51,77 +55,94 @@ namespace CheatCodeLite
             }
 
             availablePatterns.Add(cp);
-        }
-        void Clear()
-        {
-            index = 0;
-            stopWatch.Stop();
+            matchedPatterns.Clear();
             matchedPatterns = new List<ChainePattern>(availablePatterns);
         }
-        public void RegisterKeystroke(int key)
+
+        int[] patternInProgress;
+        /// <summary>
+        /// Pass a keystoke handled by user side using either windows event like KeyPress or a third party
+        /// </summary>
+        /// <param name="keyValue">KeyValue</param>
+        public void AddKeystroke(int keyValue)
         {
-        MatchLabel:
-            if (stopWatch.IsRunning)
+            if (patternInProgress == null)
             {
+                // check if any pattern start with the given key
+                if(availablePatterns.Exists(f => f.Pattern[0].Equals(keyValue)))
+                {
+                    //Pattern match found in the first index
+                    patternInProgress = new[] { keyValue };
+                    stopWatch.Restart();
+                }
+                return;
+            }
+            else
+            {
+                // check if timeup to restart listening
                 TimeSpan ts = stopWatch.Elapsed;
                 if (ts.TotalMilliseconds > interval)
                 {
-                    Clear();
-                    goto MatchLabel;
+                    patternInProgress = new[] { keyValue };
+                    stopWatch.Restart();
+                    return;
                 }
-            }
-            else
-                stopWatch.Start();
+                // construct new pattern, add new keystroke to the patternInProgress
+                patternInProgress = patternInProgress.Concat(new [] { keyValue }).ToArray();
 
-            bool isMatched = false;
-            for (int cnt = matchedPatterns.Count; cnt > 0; cnt--)
-            {
-                if (matchedPatterns[cnt - 1].Pattern[index] == key)
-                {
-                    isMatched = true;
-                }
-                else
-                {
-                    matchedPatterns.RemoveAt(cnt - 1);
-                }
-            }
+                // control variable
+                //bool found = false;
 
-            if (!isMatched)
-            {
-                Clear();
-                goto MatchLabel;
-            }
-            else
-            {
-                if (matchedPatterns.Count == 0)
+                // check if a pattern contain new currentPattern
+                // check for
+                //if (availablePatterns.FindAll(f => f.Pattern.Length >= patternInProgress.Length && f.Pattern.ToList().GetRange(0, patternInProgress.Length).ToArray().SequenceEqual(patternInProgress)).Any())
+                //{
+                //    found = true;
+                //}
+
+
+                //if (!found)
+                //{
+                //    // if no match then reset patternInProgress and add new keystroke
+                //    patternInProgress = new[] { keyValue };
+                //}
+                //else
+                //{
+                //    // check if it match any pattern
+                //    var matched = matchedPatterns.Find(f => f.Pattern.SequenceEqual(patternInProgress));
+                //    if(matched != null)
+                //    {
+                //        PatternEventHandler patternEventHandler = new PatternEventHandler(matched);
+                //        // trigger event
+                //        OnAddedCheatCodeHandler(patternEventHandler);
+                //        stopWatch.Stop();
+                //        patternInProgress = null;
+                //    }
+                //}
+
+
+                if (availablePatterns.FindAll(f => f.Pattern.Length >= patternInProgress.Length && f.Pattern.ToList().GetRange(0, patternInProgress.Length).ToArray().SequenceEqual(patternInProgress)).Any())
                 {
-                    throw new Exception("Code should not be reached");
-                }
-                else
-                {
-                    foreach (ChainePattern current in matchedPatterns)
+                    // check if it match any pattern
+                    var matched = matchedPatterns.Find(f => f.Pattern.SequenceEqual(patternInProgress));
+                    if (matched != null)
                     {
-                        if (current.Count() == index + 1)
-                        {
-                            PatternEventHandler patternEventHandler = new PatternEventHandler(current);
-                            OnAddedCheatCodeHandler(patternEventHandler);
-                            Clear();
-                            return;
-                        }
+                        PatternEventHandler patternEventHandler = new PatternEventHandler(matched);
+                        // trigger event
+                        OnAddedCheatCodeHandler(patternEventHandler);
+                        stopWatch.Stop();
+                        patternInProgress = null;
                     }
-                    index++;
                 }
+                else
+                {
+                    patternInProgress = new[] { keyValue };
+                }
+
+
+
             }
         }
 
-        public IEnumerator<int> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
