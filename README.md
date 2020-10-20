@@ -1,7 +1,7 @@
 # CheatCodeLite
 Cheat code keyword handler<br>
 
-<img src="resources/logo.png" width="100">
+<img src="logo.png" width="100">
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/melharfi/MCheatCodeLite/blob/master/LICENSE)
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://github.com/melharfi/MCheatCodeLite)
