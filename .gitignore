@@ -3,3 +3,4 @@
 ################################################################################
 
 /CheatCodeLite/bin/Debug/netstandard2.0/CheatCodeLite.pdb
+*.nupkg
