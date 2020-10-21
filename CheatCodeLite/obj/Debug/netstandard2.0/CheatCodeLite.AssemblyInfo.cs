@@ -13,7 +13,9 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mohssine EL HARFI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Cheat code handler")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Cheat code handler to trigger an event when chain of keystrokes equals a defined " +
+    "cheat code.\r\nYou can use as many as cheat code you want with an elapsed time to " +
+    "reset current cheat code.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheatCodeLite")]
