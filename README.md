@@ -18,7 +18,7 @@ Just add a reference to the library in the release https://github.com/melharfi/C
 or using nuget<br>
 Install-Package CheatCodeLite -Version 1.0.0
 
-Once it's done you can then use this code to start :
+Once it's done you can then use this code to start on a Winform:
 
 
 <img src="resources/sample1.PNG"><br>
