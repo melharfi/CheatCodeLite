@@ -26,7 +26,14 @@ Once it's done you can then use this code to start :
 Pay attention that the value passed to the CheatCodeLite.CheatCodeLite(int keystrokesInterval) is the time allowed to keep chained cheat code, if this time is overwhelmed then the cheat code in progress is reseted.<br>
 To desable this timer just put a very long value like 100000000 :)<br>
 
+Pay attention to some scenarios that will raise some error.
+When a cheat code is registred like "HELLO" in the first hand, and another cheat code is registred like "HELL", in that case the second cheat code will hide the first one because cheat code will be reset as soon as it trigger the "HELL" event, so to avoid that an exception will be thrown to prevent and warn you about that.
+<img src="resources/throwError1.PNG"><br>
 
+Same scenarion when the revers happen, when you first add a cheat code like "HELL" and that you just another one like "HELLO", then the second one will be hidden by the first one.
+<img src="resources/throwError2.PNG"><br>
 
+Same thing when a duplication is found.<br>
+<img src="resources/throwError3.PNG"><br>
 
 Hope it helps someone
