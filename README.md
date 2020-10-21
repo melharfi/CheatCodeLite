@@ -1,7 +1,7 @@
 # CheatCodeLite
 Cheat code keystrokes<br>
 
-<img src="logo.png" width="100">
+<img src="resources/logo.png" width="100">
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/melharfi/MCheatCodeLite/blob/master/LICENSE)
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://github.com/melharfi/MCheatCodeLite)
@@ -20,5 +20,13 @@ or using nuget
 Once it's done you can then use this code to start :
 
 
-<img src="sample1.PNG"><br>
-<img src="sample2.PNG">
+<img src="resources/sample1.PNG"><br>
+<img src="resources/sample2.PNG"><br>
+
+Pay attention that the value passed to the CheatCodeLite.CheatCodeLite(int keystrokesInterval) is the time allowed to keep chained cheat code, if this time is overwhelmed then the cheat code in progress is reseted.<br>
+To desable this timer just put a very long value like 100000000 :)<br>
+
+
+
+
+Hope it helps someone
