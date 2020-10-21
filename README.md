@@ -15,7 +15,8 @@ Hello, this is a library that allow you to trigger some cheat codes in your game
 The keystrokes handler is not included in this library cause it really depend on the context where this library is used, most of time games use a third party to catch keystrokes not the one in the .Net Framework Class Library.<br>
 
 Just add a reference to the library in the release https://github.com/melharfi/CheatCodeLite/releases
-or using nuget
+or using nuget<br>
+Install-Package CheatCodeLite -Version 1.0.0
 
 Once it's done you can then use this code to start :
 
