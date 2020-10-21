@@ -3,7 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Mohssine EL HARFI</Authors>
-    <Description>Cheat code handler</Description>
+    <Description>Cheat code handler to trigger an event when chain of keystrokes equals a defined cheat code.
+You can use as many as cheat code you want with an elapsed time to reset current cheat code.</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/melharfi/CheatCodeLite</PackageProjectUrl>
     <PackageIcon>logo.png</PackageIcon>
@@ -11,10 +12,16 @@
     <RepositoryType>git</RepositoryType>
     <ApplicationIcon>logo.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company />
+    <Copyright></Copyright>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\resources\logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
