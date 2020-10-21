@@ -17,7 +17,7 @@ The keystrokes handler is not included in this library cause it really depend on
 Just add a reference to the library in the release https://github.com/melharfi/CheatCodeLite/releases
 or using nuget
 
-one it's done you can then use this code to start :
+Once it's done you can then use this code to start :
 
 
 <img src="sample1.PNG"><br>
