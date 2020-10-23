@@ -8,7 +8,7 @@ Cheat code keystrokes<br>
 ![GitHub Release Date](https://img.shields.io/github/release-date/melharfi/CheatCodeLite?color=black)
 [![GitHub Release](https://img.shields.io/github/v/release/melharfi/CheatCodeLite)](https://github.com/melharfi/CheatCodeLite/releases) 
 [![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VN92ND2CDMX92)
-[![Nuget](https://img.shields.io/nuget/v/melharfi?color=red)](https://www.nuget.org/packages/MELHARFI/)
+[![Nuget](https://img.shields.io/nuget/v/melharfi?color=red)](https://www.nuget.org/packages/CheatCodeLite/)
 ![GitHub language count](https://img.shields.io/github/languages/count/melharfi/CheatCodeLite?color=red)
 
 Hello, this is a library that allow you to trigger cheat codes in your game/application using .NET.<br>
