@@ -12,7 +12,7 @@ Cheat code keystrokes<br>
 ![GitHub language count](https://img.shields.io/github/languages/count/melharfi/CheatCodeLite?color=red)
 
 Hello, this is a library that allow you to trigger cheat codes events in your game/application using .NET.<br>
-The keystrokes handler is not included in this library cause it really depend on the context where this library is used, most of time games use a third party to catch keystrokes not the one in the .Net Framework Class Library.<br>
+The keystrokes handler is not included in this library cause it really depend on the context where this library is used, most of time games use a third party to catch keystrokes not the one in the .Net Framework.<br>
 
 Just add a reference to the library in the release https://github.com/melharfi/CheatCodeLite/releases
 or using nuget<br>
