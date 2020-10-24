@@ -1,9 +1,0 @@
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\bin\Release\netstandard2.0\CheatCodeLite.deps.json
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\bin\Release\netstandard2.0\CheatCodeLite.dll
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\bin\Release\netstandard2.0\CheatCodeLite.pdb
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\obj\Release\netstandard2.0\CheatCodeLite.csprojAssemblyReference.cache
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\obj\Release\netstandard2.0\CheatCodeLite.AssemblyInfoInputs.cache
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\obj\Release\netstandard2.0\CheatCodeLite.AssemblyInfo.cs
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\obj\Release\netstandard2.0\CheatCodeLite.dll
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\obj\Release\netstandard2.0\CheatCodeLite.pdb
-D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\obj\Release\netstandard2.0\CheatCodeLite.csproj.CoreCompileInputs.cache
