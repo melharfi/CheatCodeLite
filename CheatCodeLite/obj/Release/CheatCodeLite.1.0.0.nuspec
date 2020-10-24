@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CheatCodeLite</id>
+    <version>1.0.0</version>
+    <authors>Mohssine EL HARFI</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>logo.png</icon>
+    <projectUrl>https://github.com/melharfi/CheatCodeLite</projectUrl>
+    <description>Cheat code handler to trigger an event when chain of keystrokes equals a defined cheat code.
+You can use as many as cheat code you want with an elapsed time to reset current cheat code.</description>
+    <repository type="git" url="https://github.com/melharfi/CheatCodeLite" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Project\Repos\Github\CheatCodeLite\CheatCodeLite\bin\Release\netstandard2.0\CheatCodeLite.dll" target="lib\netstandard2.0\CheatCodeLite.dll" />
+    <file src="D:\Project\Repos\Github\CheatCodeLite\LICENSE.txt" target="LICENSE.txt" />
+    <file src="D:\Project\Repos\Github\CheatCodeLite\resources\logo.png" target="logo.png" />
+  </files>
+</package>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\Repos\\Github\\CheatCodeLite old\\CheatCodeLite\\CheatCodeLite.csproj": {}
+    "D:\\Project\\Repos\\Github\\CheatCodeLite\\CheatCodeLite\\CheatCodeLite.csproj": {}
   },
   "projects": {
-    "D:\\Project\\Repos\\Github\\CheatCodeLite old\\CheatCodeLite\\CheatCodeLite.csproj": {
+    "D:\\Project\\Repos\\Github\\CheatCodeLite\\CheatCodeLite\\CheatCodeLite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\Repos\\Github\\CheatCodeLite old\\CheatCodeLite\\CheatCodeLite.csproj",
+        "projectUniqueName": "D:\\Project\\Repos\\Github\\CheatCodeLite\\CheatCodeLite\\CheatCodeLite.csproj",
         "projectName": "CheatCodeLite",
-        "projectPath": "D:\\Project\\Repos\\Github\\CheatCodeLite old\\CheatCodeLite\\CheatCodeLite.csproj",
+        "projectPath": "D:\\Project\\Repos\\Github\\CheatCodeLite\\CheatCodeLite\\CheatCodeLite.csproj",
         "packagesPath": "C:\\Users\\the-m\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\Repos\\Github\\CheatCodeLite old\\CheatCodeLite\\obj\\",
+        "outputPath": "D:\\Project\\Repos\\Github\\CheatCodeLite\\CheatCodeLite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\the-m\\AppData\\Roaming\\NuGet\\NuGet.Config",

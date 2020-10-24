@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "BEwjtbTQsgXHuKSK+2jvLQr6gJnXBKscIPpNa2TLurpOQQDAmiqJCS+dL4+AhK0ax9evQQNQqL0gWKetqsqseA==",
+  "success": true,
+  "projectFilePath": "D:\\Project\\Repos\\Github\\CheatCodeLite\\CheatCodeLite\\CheatCodeLite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\the-m\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\the-m\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
